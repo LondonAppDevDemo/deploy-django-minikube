@@ -1,0 +1,6 @@
+secretGenerator:
+  - name: db-password
+    literals:
+      - password=supersecurepasswordhere
+resources:
+  - postgres.yaml
