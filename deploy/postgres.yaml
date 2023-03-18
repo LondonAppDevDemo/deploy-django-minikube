@@ -31,11 +31,11 @@ spec:
       labels:
         app: django
         tier: postgres
-  volumes:
-    - name: postgres-data
-      persistentVolumeClaim:
-        claimName: django-postgres-pvc
     spec:
+      volumes:
+        - name: postgres-data
+          persistentVolumeClaim:
+            claimName: django-postgres-pvc
       containers:
         - image: postgres:15.2
           name: postgres
